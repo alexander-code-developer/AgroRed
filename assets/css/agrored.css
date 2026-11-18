@@ -1,0 +1,118 @@
+/* =====================================================================
+   AgroRed Hidalgo - Estilos (sobre Bootstrap 5)
+   Paleta tomada del logo: verde bosque, naranja de fruto, crema de papel.
+   ===================================================================== */
+:root{
+  --ar-verde:#1f5c2e;
+  --ar-verde-osc:#16421f;
+  --ar-verde-claro:#e6f0e3;
+  --ar-naranja:#e07b1f;
+  --ar-crema:#f6f3ea;
+  --ar-tinta:#26332a;
+  --ar-gris:#5d6b62;
+  --bs-body-font-family:'Nunito Sans',system-ui,sans-serif;
+  --bs-body-bg:var(--ar-crema);
+  --bs-body-color:var(--ar-tinta);
+  --bs-link-color:var(--ar-verde);
+  --bs-link-hover-color:var(--ar-naranja);
+  --bs-border-radius:.75rem;
+}
+h1,h2,h3,h4,.ar-serif{font-family:'Fraunces',Georgia,serif;font-weight:700;letter-spacing:-.01em}
+:focus-visible{outline:3px solid var(--ar-naranja);outline-offset:2px}
+
+/* ---------- Encabezado ---------- */
+.ar-header{background:linear-gradient(180deg,var(--ar-verde-osc),var(--ar-verde));position:sticky;top:0;z-index:1030;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.ar-logo{height:48px;width:auto;background:#fff;border-radius:50%;padding:2px}
+.ar-marca{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:#fff}
+.ar-lema{color:#cfe3cd;font-size:.75rem}
+.ar-link{color:#e9f3e7!important;border-radius:.6rem;padding:.5rem .8rem!important;font-weight:600}
+.ar-link:hover{background:rgba(255,255,255,.12)}
+.ar-link.active{background:#fff;color:var(--ar-verde)!important}
+.ar-buscar .form-control{border-radius:2rem 0 0 2rem;border:0;min-width:170px}
+.ar-buscar .btn{background:var(--ar-naranja);color:#fff;border-radius:0 2rem 2rem 0}
+.btn-ar-claro{background:#fff;color:var(--ar-verde);font-weight:700;border-radius:2rem}
+.btn-ar-claro:hover{background:var(--ar-naranja);color:#fff}
+
+/* ---------- Botones ---------- */
+.btn-ar{background:var(--ar-verde);color:#fff;border:0;font-weight:700;padding:.6rem 1.3rem;border-radius:2rem}
+.btn-ar:hover,.btn-ar:focus{background:var(--ar-verde-osc);color:#fff}
+.btn-naranja{background:var(--ar-naranja);color:#fff;border:0;font-weight:700;padding:.6rem 1.3rem;border-radius:2rem}
+.btn-naranja:hover{background:#c46a14;color:#fff}
+
+/* ---------- Hero ---------- */
+.ar-hero{background:
+   radial-gradient(circle at 85% 20%,rgba(224,123,31,.18),transparent 45%),
+   linear-gradient(135deg,var(--ar-verde-osc) 0%,var(--ar-verde) 70%);
+  color:#fff;padding:4rem 0 5rem;position:relative;overflow:hidden}
+.ar-hero::after{content:"";position:absolute;inset:auto 0 -1px 0;height:44px;
+  background:var(--ar-crema);clip-path:ellipse(70% 100% at 50% 100%)}
+.ar-hero h1{font-size:clamp(2rem,4.5vw,3.3rem);line-height:1.1}
+.ar-hero p.lead{color:#d9ead6;max-width:34rem}
+.ar-hero-logo{max-width:340px;width:100%;filter:drop-shadow(0 10px 25px rgba(0,0,0,.35));
+  background:#fff;border-radius:50%;padding:12px}
+
+/* ---------- Tarjetas ---------- */
+.ar-card{background:#fff;border:1px solid #e3e0d3;border-radius:1rem;padding:1.4rem;height:100%;transition:box-shadow .2s,border-color .2s}
+a.ar-card{display:block;text-decoration:none;color:inherit}
+a.ar-card:hover{border-color:var(--ar-verde);box-shadow:0 8px 24px rgba(31,92,46,.12)}
+.ar-icono{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:1.6rem;
+  background:var(--ar-verde-claro);color:var(--ar-verde);margin-bottom:.9rem}
+.ar-icono.naranja{background:#fdebd8;color:var(--ar-naranja)}
+.ar-card h3{font-size:1.15rem}
+
+/* ---------- Secciones ---------- */
+.ar-titulo{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ar-verde-osc)}
+.ar-sub{color:var(--ar-gris)}
+.ar-panel{background:#fff;border:1px solid #e3e0d3;border-radius:1.1rem;padding:clamp(1.2rem,3vw,2rem);box-shadow:0 4px 18px rgba(0,0,0,.04)}
+.ar-encabezado-pag{display:flex;align-items:center;gap:1rem;margin:2rem 0 1.4rem}
+.ar-encabezado-pag .ar-icono{margin:0;flex:none}
+.ar-encabezado-pag h1{font-size:clamp(1.5rem,3vw,2rem);margin:0;color:var(--ar-verde-osc)}
+.ar-encabezado-pag p{margin:0;color:var(--ar-gris)}
+
+/* ---------- Mapas ---------- */
+.ar-mapa{height:420px;border-radius:1rem;border:1px solid #d8d4c3;box-shadow:0 4px 18px rgba(0,0,0,.08);z-index:0}
+.ar-mapa.alto{height:520px}
+.leaflet-popup-content-wrapper{border-radius:.8rem}
+.pin-huerto{background:var(--ar-verde);color:#fff;width:34px;height:34px;border-radius:50% 50% 50% 0;
+  transform:rotate(-45deg);display:grid;place-items:center;border:2px solid #fff;box-shadow:0 3px 8px rgba(0,0,0,.35)}
+.pin-huerto i{transform:rotate(45deg);font-size:1rem}
+.pin-huerto.sel{background:var(--ar-naranja)}
+
+/* ---------- Formularios ---------- */
+.form-label{font-weight:700;color:var(--ar-verde-osc)}
+.form-control,.form-select{border-radius:.7rem;border-color:#cfd6cc;padding:.6rem .85rem}
+.form-control:focus,.form-select:focus{border-color:var(--ar-verde);box-shadow:0 0 0 .2rem rgba(31,92,46,.15)}
+.ar-auth{max-width:460px;margin:3rem auto}
+.ar-auth .ar-badge-ico{width:68px;height:68px;border-radius:50%;background:var(--ar-verde-claro);color:var(--ar-verde);
+  display:grid;place-items:center;font-size:2rem;margin:0 auto 1rem}
+
+/* ---------- Tablas / estados ---------- */
+.table-ar thead th{background:var(--ar-verde);color:#fff;border:0;font-weight:700}
+.table-ar tbody tr:hover{background:var(--ar-verde-claro)}
+.estado{display:inline-block;padding:.2rem .75rem;border-radius:2rem;font-size:.8rem;font-weight:700;border:1px solid}
+.estado.solicitado{background:#eef0f2;color:#495057;border-color:#adb5bd}
+.estado.contactado{background:#dbeafe;color:#1e4e8c;border-color:#7fb0ee}
+.estado.completado{background:#d6f0dc;color:#1c6a30;border-color:#7cc791}
+.estado.cancelado{background:#fbdada;color:#9b1c1c;border-color:#e89a9a}
+
+/* ---------- Reseñas ---------- */
+.estrellas-input{display:inline-flex;flex-direction:row-reverse;gap:.15rem}
+.estrellas-input input{position:absolute;opacity:0}
+.estrellas-input label{font-size:1.9rem;color:#ccc;cursor:pointer;line-height:1}
+.estrellas-input input:checked ~ label,.estrellas-input label:hover,.estrellas-input label:hover ~ label{color:#f5a300}
+.estrellas-input input:focus-visible + label{outline:3px solid var(--ar-naranja);border-radius:4px}
+.resena{border-left:4px solid var(--ar-verde);background:#fff;border-radius:.6rem;padding:.9rem 1rem}
+
+/* ---------- Métricas ---------- */
+.metrica{text-align:center}
+.metrica .num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--ar-verde);line-height:1}
+.metrica .lbl{color:var(--ar-gris);font-weight:600;margin-top:.3rem}
+
+/* ---------- Pie ---------- */
+.ar-footer{background:var(--ar-verde-osc);color:#fff}
+
+@media (max-width:991px){
+  .ar-link.active{display:inline-block}
+  .ar-mapa{height:340px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
