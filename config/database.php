@@ -14,11 +14,8 @@ function db(): PDO
         ]);
     } catch (PDOException $e) {
         http_response_code(500);
-        exit('<h3 style="font-family:sans-serif">Error real de conexión:</h3>'
-           . '<pre style="background:#eee;padding:12px;border-radius:6px">'
-           . htmlspecialchars("Host: {$c['host']} | Puerto: {$c['port']} | BD: {$c['name']} | Usuario: {$c['user']}\n")
-           . htmlspecialchars("Mensaje: " . $e->getMessage())
-           . '</pre>');
+        exit('<h3 style="font-family:sans-serif">No se pudo conectar a la base de datos.</h3>'
+           . '<p style="font-family:sans-serif">Revisa <code>config/config.php</code> e importa <code>database/schema.sql</code>.</p>');
     }
     return $pdo;
 }
